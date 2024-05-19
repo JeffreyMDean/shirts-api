@@ -12,4 +12,9 @@ class ShirtsController < ApplicationController
     )
     render :show
   end
+
+  def show
+    @shirt = Shirt.find_by(id: params[:id])
+    render :show
+  end
 end
