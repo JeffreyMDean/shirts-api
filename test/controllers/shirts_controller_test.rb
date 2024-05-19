@@ -23,4 +23,15 @@ class ShirtsControllerTest < ActionDispatch::IntegrationTest
     data = JSON.parse(response.body)
     assert_equal ["style", "color", "size", "created_at", "updated_at"], data.keys
   end
+
+  test "update" do
+    shirt = Shirt.first
+    patch "/shirts/#{shirt.id}.json", params: { style: "Updated style", color: "Updated color", size: "Updated Size" }
+    assert_response 200
+
+    data = JSON.parse(response.body)
+    assert_equal "Updated style", data["style"]
+    assert_equal "Updated color", data["color"]
+    assert_equal "Updated size", data["size"]
+  end
 end

@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get "/shirts" => "shirts#index"
   get "/shirts/:id" => "shirts#show"
   post "/shirts" => "shirts#create"
+  patch "/shirts/:id" => "products#update"
 end
