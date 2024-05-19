@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+shirt1 = Shirt.new(style: "t-shirt", color: "red", size: "large") 
+shirt1.save
+
+shirt2 = Shirt.new(style: "dress shirt", color: "white", size: "medium")
+shirt2.save
