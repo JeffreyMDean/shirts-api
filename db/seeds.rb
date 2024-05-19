@@ -11,4 +11,4 @@ shirt1 = Shirt.new(style: "t-shirt", color: "red", size: "large")
 shirt1.save
 
 shirt2 = Shirt.new(style: "dress shirt", color: "white", size: "medium")
-shirt2.save
+shirt2.save 
